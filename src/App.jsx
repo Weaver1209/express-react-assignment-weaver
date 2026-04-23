@@ -3,6 +3,7 @@ import axios from "axios"
 import Snip from "./components/snippet.jsx"
 import Input from "./components/input.jsx"
 import UUID from  "./components/uuid.js"
+
 function  App(){
   UUID();
   const [allSnips , setallSnips] = useState([])
@@ -27,8 +28,9 @@ function  App(){
      </div>
      <div className='snips'>
        { allSnips.map((snippet) => (
-                        <Snip code={snippet.code} id={snippet._id} comment={snippet.comment} />
-       ))}</div>
+                        <Snip code={snippet.code} id={snippet._id} />
+       ))}
+    </div>      
      <Input />
     </>
   )
