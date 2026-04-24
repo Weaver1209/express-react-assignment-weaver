@@ -4,14 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import CommentPage from './components/commentsPage.jsx';
-// import ProfilePage from './components/profile.jsx';
+import ProfilePage from './components/profile.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <BrowserRouter>
     <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/snippet/:id" element={<CommentPage />} />
-                {/* <Route path="/profile/:id" element={<ProfilePage/>} /> */}
+                <Route path="/profile/:id" element={<ProfilePage/>} />
       </Routes>
     
    </BrowserRouter>

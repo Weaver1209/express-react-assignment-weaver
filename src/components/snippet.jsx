@@ -1,18 +1,15 @@
 //import react from "react"
 import {useState} from "react"
+import { useNavigate } from "react-router-dom"
 function snip(info){
-    const[showcomment,setshowcomment] = useState(false)
+    const navigate= useNavigate()
     return(
         
-        <div className="snip-card" onClick={()=>{
-            setshowcomment(true)
-            Comment(info.comment)}}>
+        <div className="snip-card" onClick={() => navigate(`/snippet/${info.id}`)} style={{ cursor: 'pointer' }}>
+            
           <h1 className="name">Anonymous</h1>
           <pre className="code"><code>{info.code}</code></pre>
        </div>
     )
 }
 export default snip
-function Comment(comment){
-
-}
